@@ -5,7 +5,7 @@ var app = express();
 
 // prepare server routing
 app.use('/', express.static(__dirname + '/../www')); // redirect static calls
-app.set('port', process.env.PORT || 3000); // main port
+app.set('port', process.env.PORT || 4000); // main port
 
 // cookie-based session
 var cookieSession = require('cookie-session')
@@ -24,6 +24,8 @@ loadRoute('./modelderivative');
 // view hub models sample
 loadRoute('./datamanagement');
 loadRoute('./user');
+// jquery endpoint
+// loadRoute('./jquery')
 
 function loadRoute(path) {
     try {
@@ -32,5 +34,6 @@ function loadRoute(path) {
         app.use('/', m);
     } catch (e) { }
 }
+
 
 module.exports = app;

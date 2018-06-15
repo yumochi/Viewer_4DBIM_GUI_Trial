@@ -63,4 +63,9 @@ MyAwesomeExtension.prototype.unload = function () {
   return true;
 };
 
+
+// *******************************************
+// expanding on My Awesome Extension
+// *******************************************
+
 Autodesk.Viewing.theExtensionManager.registerExtension('MyAwesomeExtension', MyAwesomeExtension);
