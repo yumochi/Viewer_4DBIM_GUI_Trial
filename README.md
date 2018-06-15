@@ -50,7 +50,7 @@ node start.js
 
 ## Versioning
 
-Construction-Material-Recognition is currently in beta version
+Viewer_4DBIM_GUI_Trial is currently in beta version
 
 
 ## Authors
