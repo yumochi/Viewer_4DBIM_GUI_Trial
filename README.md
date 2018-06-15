@@ -18,12 +18,12 @@ A step by step series of examples that tell you how to get a development env run
 
 1) Clone Construction-Material-Recognition to local repo 
 ```
-git git@github.com:yangdihan/Construction-Material-Recognition.git
+git git@github.com:yumochi/Viewer_4DBIM_GUI_Trial.git
 ```
 
 2) Navigate to local Construction-Material-Recognition folder
 ```
-cd Construction-Material-Recognition
+cd Viewer_4DBIM_GUI_Trial
 ```
 
 3) Install node and node dependencies
