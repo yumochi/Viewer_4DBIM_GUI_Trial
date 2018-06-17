@@ -33,15 +33,11 @@ MyAwesomeExtension.prototype.createUI = function () {
   var myAwesomeToolbarButton = new Autodesk.Viewing.UI.Button('runMyAwesomeCode');
   myAwesomeToolbarButton.onClick = function (e) {
 
-    // **********************
-    //
-    //
-    // Execute an action here
-    //
-    //
-    // **********************
 
-    alert('I am an extension');
+    // wait until the document is ready...
+    $.getJSON('/json/output.json', function(json) {
+    console.log(json); // this will show the info it in firebug console
+    });
 
   };
   // myAwesomeToolbarButton CSS class should be defined on your .css file

@@ -5,6 +5,9 @@ var app = express();
 
 // prepare server routing
 app.use('/', express.static(__dirname + '/../www')); // redirect static calls
+app.use('/packages', express.static(__dirname + '/../node_modules'));
+app.use('/json', express.static(__dirname + '/../json'));
+
 app.set('port', process.env.PORT || 4000); // main port
 
 // cookie-based session
