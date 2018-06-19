@@ -22,9 +22,8 @@
   <script src="/js/dockingpanelextension.js"></script>
   <script src="/js/FindElementsInView.js"></script>
 
-
   <!-- XLS related libraries -->
-  <script src="js/libraries/Blob.js"></script> <!-- https://github.com/eligrey/Blob.js -->
+  <!-- <script src="js/libraries/Blob.js"></script>  --><!-- https://github.com/eligrey/Blob.js -->
   <script src="js/libraries/FileSaver.min.js"></script> <!-- https://github.com/eligrey/FileSaver.js -->
   <script src="js/libraries/xlsx.core.min.js"></script> <!-- https://github.com/SheetJS/js-xlsx -->
   <script src="js/ForgeXLS.js"></script>
@@ -90,5 +89,55 @@
       </div>
     </div>
   </div>
+
+  <!-- Activity Display -->
+  <div class="activity display">
+    <button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div id="roster">
+      <ol>
+        <li><input type="text" value="Foo"></li>
+        <li><input type="text" value="Bar"></li>
+        <li><input type="text" value="Baz"></li>
+        <li><input type="text" value="Qux"></li>
+      </ol>
+    </div>
+    <div id="foo"></div>
+    <button id="closeBtn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+
+</div>
+
+
+
+  </div>
 </body>
+
+  <script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// create a button to close the modal
+var closeBtn = document.getElementById("closeBtn");
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+</script>
+
 </html>

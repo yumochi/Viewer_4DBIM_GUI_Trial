@@ -1,6 +1,44 @@
 // *******************************************
 // My Awesome Extension
 // *******************************************
+
+function makeUL(activities) {
+  // Create the list element:
+  var list = document.createElement('ul');
+
+  for(var propt in activities){
+    // Create the list item:
+    var item = document.createElement('li');
+
+    // Create the input item in the list item:
+    var itemName = document.createElement("INPUT");
+    itemName.setAttribute("type", "text");
+    itemName.setAttribute("value", propt);
+    // Set its contents:
+    item.appendChild(itemName);
+
+
+    for(var subPropt in activities[propt]){
+    // Create the list item:
+    itemChild = document.createElement("INPUT");
+
+    itemChild.setAttribute("type", "text");
+
+    itemChild.setAttribute("value", activities[propt][subPropt]);
+
+    item.appendChild(itemChild)
+
+
+    };
+
+    // Add it to the list:
+    list.appendChild(item);
+  };
+
+  // Finally, return the constructed list:
+  return list;
+}
+
 function MyAwesomeExtension(viewer, options) {
   Autodesk.Viewing.Extension.call(this, viewer, options);
 }
@@ -35,8 +73,18 @@ MyAwesomeExtension.prototype.createUI = function () {
 
 
     // wait until the document is ready...
-    $.getJSON('/json/output.json', function(json) {
-    console.log(json); // this will show the info it in firebug console
+    $.getJSON('/json/output.json', function(activities) {
+    console.log(typeof(activities));
+
+    var options = [
+        set0 = ['Option 1','Option 2'],
+        set1 = ['First Option','Second Option','Third Option']
+    ];
+
+
+    // Add the contents of options[0] to #foo:
+    document.getElementById('foo').appendChild(makeUL(activities));
+
     });
 
   };
