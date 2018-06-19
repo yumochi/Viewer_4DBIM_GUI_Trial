@@ -10,23 +10,26 @@ function makeUL(activities) {
     // Create the list item:
     var item = document.createElement('li');
 
-    // Create the input item in the list item:
+    // Create the input item in the list item
+    // this represent the item name
     var itemName = document.createElement("INPUT");
     itemName.setAttribute("type", "text");
     itemName.setAttribute("value", propt);
+
     // Set its contents:
     item.appendChild(itemName);
 
-
+    // for every subsequent property
     for(var subPropt in activities[propt]){
-    // Create the list item:
-    itemChild = document.createElement("INPUT");
 
-    itemChild.setAttribute("type", "text");
+    // do the same an create an input item 
+      itemChild = document.createElement("INPUT");
 
-    itemChild.setAttribute("value", activities[propt][subPropt]);
+      itemChild.setAttribute("type", "text");
 
-    item.appendChild(itemChild)
+      itemChild.setAttribute("value", activities[propt][subPropt]);
+
+      item.appendChild(itemChild)
 
 
     };
