@@ -99,16 +99,14 @@
 
   <!-- Modal content -->
   <div class="modal-content">
-    <div id="roster">
-      <ol>
-        <li><input type="text" value="Foo"></li>
-        <li><input type="text" value="Bar"></li>
-        <li><input type="text" value="Baz"></li>
-        <li><input type="text" value="Qux"></li>
-      </ol>
-    </div>
+    <div>
+      <input type="text" class="search" placeholder="Activity Name or Attributes">
+    </div>>
+    <div>
+      <button id="closeBtn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button id="saveBtn" type="button" class="btn btn-default" >Save Changes</button>
+    </div>>
     <div id="foo"></div>
-    <button id="closeBtn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
   </div>
 
 </div>
@@ -122,16 +120,8 @@
 // Get the modal
 var modal = document.getElementById('myModal');
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
 // create a button to close the modal
 var closeBtn = document.getElementById("closeBtn");
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
 
 // When the user clicks on <span> (x), close the modal
 closeBtn.onclick = function() {
